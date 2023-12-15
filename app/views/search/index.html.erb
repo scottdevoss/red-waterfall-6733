@@ -1,1 +1,11 @@
+<h1><%= @nation %></h1>
 
+<h2>Total Number of People: <%= @data.count %></h2>
+
+<h3>Member Details:</h3>
+<% @data.each do |member| %>
+  <p>Name: <%= member[:name] %></p>
+  <p>Allies: <%= member[:allies] %></p>
+  <p>Enemies: <%= member[:enemies] %></p>
+  <p>Affiliations: <%= member[:affiliations] %></p><br>
+<% end %>

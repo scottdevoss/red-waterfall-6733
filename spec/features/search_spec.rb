@@ -26,9 +26,14 @@ RSpec.describe "Search for Members" do
       click_on "Search For Members"
 
       expect(current_path).to eq "/search"
-      
-      expect(page).to have_content("Total Number of People:")
-      expect(page).to have_content("First 25 Member Details:")
+      # save_and_open_page
+      expect(page).to have_content("Total Number of People: 20")
+      expect(page).to have_content("Member Details:")
+      expect(page).to have_content("Name: Azula")
+      expect(page).to have_content("Name: Chan")
+      expect(page).to have_content("Allies:")
+      expect(page).to have_content("Enemies:")
+      expect(page).to have_content("Affiliations:")
     end
   end
 end
