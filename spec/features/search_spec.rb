@@ -29,7 +29,7 @@ RSpec.describe "Search for Members" do
           'User-Agent'=>'Faraday v2.7.12'
            }).
          to_return(status: 200, body: json_response, headers: {})
-         
+
       visit "/"
 
       select "Fire Nation", :from => :nation
@@ -42,6 +42,7 @@ RSpec.describe "Search for Members" do
       expect(page).to have_content("Member Details:")
       expect(page).to have_content("Name: Azula")
       expect(page).to have_content("Name: Chan")
+      expect(page).to have_content("Photo:")
       expect(page).to have_content("Allies:")
       expect(page).to have_content("Enemies:")
       expect(page).to have_content("Affiliations:")

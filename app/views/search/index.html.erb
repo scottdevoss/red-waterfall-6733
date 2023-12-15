@@ -5,6 +5,7 @@
 <h3>Member Details:</h3>
 <% @data.each do |member| %>
   <p>Name: <%= member[:name] %></p>
+  <p>Photo: <%= member[:photoUrl] %></p>
   <p>Allies: <%= member[:allies] %></p>
   <p>Enemies: <%= member[:enemies] %></p>
   <p>Affiliations: <%= member[:affiliations] %></p><br>
